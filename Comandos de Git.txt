@@ -1,0 +1,26 @@
+OJO: Siempre que empiezen a trabajar hacer pull
+===============================================SUBIR CAMBIOS======================================
+Elegir la rama actual
+git checkout master
+
+Subir Archvos Nuevo si los has creado
+git add . //todos los archivos
+git add nombredelarchivo //archivo especifico
+
+Guardar Cambios DE Archivos el servidor remoto
+git push origin QPOS20191.0.0
+git commit -m "Mensaje del Cambio"
+
+===============================================DESCARGAR CAMBIOS==================================
+git pull
+
+===============================================REMPLAZAR CAMBIOS LOCALES==========================
+si la has cagado en un archivo puedes reemplazar cambios locales usando el comando
+git checkout -- <filename>
+
+si la has cagado en todos puedes traer la última versión del servidor y apuntar a tu copia local principal de esta forma
+git fetch origin
+git reset --hard origin/QPOS20191.0.0
+
+para ver la diferencia entre tus archivos y los del servidor
+git diff QPOS20191.0.0 master
