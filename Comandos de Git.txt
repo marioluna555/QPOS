@@ -12,7 +12,7 @@ Subir Cambios DE Archivos el servidor remoto
 git push origin QPOS20191.0.0
 
 ===============================================DESCARGAR CAMBIOS==================================
-git pull
+git pull origin QPOS20191.0.0
 
 ===============================================REMPLAZAR CAMBIOS LOCALES==========================
 si la has cagado en un archivo puedes reemplazar cambios locales usando el comando
