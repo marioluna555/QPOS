@@ -3,13 +3,13 @@ OJO: Siempre que empiezen a trabajar hacer pull
 Elegir la rama actual
 git checkout master
 
-Subir Archvos Nuevo si los has creado
+Subir Cambios
 git add . //todos los archivos
 git add nombredelarchivo //archivo especifico
+git commit -m "Mensaje del Cambio"
 
 Guardar Cambios DE Archivos el servidor remoto
 git push origin QPOS20191.0.0
-git commit -m "Mensaje del Cambio"
 
 ===============================================DESCARGAR CAMBIOS==================================
 git pull
