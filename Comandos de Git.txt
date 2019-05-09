@@ -1,4 +1,8 @@
 OJO: Siempre que empiezen a trabajar hacer pull
+===============================================VER Historial de Cambios==========================
+git log --Ver historico de cambios del servidor
+git status --ver tus cambios en local
+
 ===============================================SUBIR CAMBIOS======================================
 Elegir la rama actual
 git checkout master
@@ -11,6 +15,7 @@ git commit -m "Mensaje del Cambio"
 Subir Cambios DE Archivos el servidor remoto
 git push origin QPOS20191.0.0
 
+Para excluir un archivo de los cambios
 ===============================================DESCARGAR CAMBIOS==================================
 git pull origin QPOS20191.0.0
 
