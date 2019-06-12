@@ -23,9 +23,12 @@ git pull origin QPOS20191.0.0
 si la has cagado en un archivo puedes reemplazar cambios locales usando el comando
 git checkout -- <filename>
 
-si la has cagado en todos puedes traer la última versión del servidor y apuntar a tu copia local principal de esta forma
+si la has cagado en todos puedes traer la ï¿½ltima versiï¿½n del servidor y apuntar a tu copia local principal de esta forma
 git fetch origin
 git reset --hard origin/QPOS20191.0.0
 
 para ver la diferencia entre tus archivos y los del servidor
 git diff QPOS20191.0.0 master
+
+Otro conector para el django
+mysql.connector.django
