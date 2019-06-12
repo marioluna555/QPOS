@@ -2,16 +2,20 @@ from django.db import models
 
 # Create your models here.
 
-class bot_lin_pais(models.model):
-    za_pais = models.intField(max_lenght=4, primary_key=true)
-    nombre_pais = models.charField(max_lenght=25)
-    abreviatura = models.charField(max_lenght=12)
-    codigo_telefonico = models.charField(max_lenght=10)
-    activo = models.booleanField()
+class bot_lin_pais(models.Model):
+    za_pais = models.IntegerField(primary_key=True)
+    nombre_pais = models.CharField(max_length=25)
+    abreviatura = models.CharField(max_length=12)
+    codigo_telefonico = models.CharField(max_length=10)
+    activo = models.BooleanField()
 
-class bot_lin_departamento(models.model):
-    za_departamento = models.intField(max_lenght=5, primary_key=true, unique=true)
-    za_pais = models.intField(max_lenght=4, foreign_key=true, unique=true)
-    nombre_departamento = models.charField(max_lenght=35)
-    abreviatura = models.charField(max_lenght=12)
-    activo = models.booleanField()
+class bot_lin_departamento(models.Model):
+    za_departamento = models.IntegerField(primary_key=True, unique=True)
+    za_pais = models.ForeignKey(
+        'bot_lin_pais',
+        on_delete=models.CASCADE,
+    )
+
+    nombre_departamento = models.CharField(max_length=35)
+    abreviatura = models.CharField(max_length=12)
+    activo = models.BooleanField()
