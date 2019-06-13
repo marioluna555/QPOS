@@ -298,3 +298,4 @@ class bot_documentos(models.Model):
 #Encontrar averiguar porque en las llaves compuestas
 #No puedo hacer referencia con llave foranea
 #Desde otras tablas
+
