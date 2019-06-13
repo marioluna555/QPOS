@@ -1,10 +1,11 @@
 {% load static %}
+
 <!doctype html>
 <html class="no-js" lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>QPOS - Sistema de Ventas</title>
+        <title>{% block title %}QPOS - Sistema de Ventas{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- CSS -->
         <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
@@ -38,6 +39,7 @@
         <div class="page-container">
             <!-- BARRA LATERAL -->
             <div class="sidebar-menu">
+                {% block sidebar %}
                 <!--- LOGOTIPO --->
                 <div class="sidebar-header">
                     <div class="logo">
@@ -66,11 +68,13 @@
                             </nav>
                         </div>
                     </div>
+                    {% endblock %}
                 </div>
                 <!-- sidebar menu area end -->
                 <!-- CONTENIDO -->
                 <div class="main-content">
                     <!-- PRIMERA BARRA DE TITULO -->
+                    {% block titlebar1 %}
                     <div class="page-title-area">
                         <div class="row align-items-center">
                             <div class="col-sm-6 clearfix">
@@ -80,7 +84,7 @@
                                     <span></span>
                                 </div>
                                 <div class="breadcrumbs-area clearfix">
-                                    <h4 class="page-title pull-left">Configuraciones</h4>
+                                    <h4 class="page-title pull-left"></h4>
                                     <ul class="breadcrumbs pull-left">
                                         <li><a href="index.html">Inicio</a></li>
                                         <li><span>Empresa</span></li>
@@ -100,8 +104,10 @@
                             </div>
                         </div>
                     </div>
+                    {% endblock %}
                     <!--FIN BARRA DE TITULO -->
                     <!--SEGUNDA BARRA -->
+                    {% block titlebar2 %}
                     <div class="header-area">
                         <div class="row align-items-center">
                             <!-- nav and search button -->
@@ -179,21 +185,28 @@
                         </div>
                         <!--- FIN SEGUNDA BARRA-->
                     </div>
+                    {% endblock %}
                     <!-- FIN HEADER -->
                     <!---------INICIO CONTENIDOS--------------->
                     <div class="main-content-inner">
+                        {% block content %}
+                                Hola Mundo
+                        {% endblock %}
                     </div>
                     <!-- FIN CONTENIDOS -->
                     <!-- INICIO PIE DE PAGINA-->
+                    {% block footer %}
                     <footer>
                         <div class="footer-area">
                             <p>© Copyright 2018. QPOS Creado por Mario Luna.</p>
                         </div>
                     </footer>
+                    {% endblock %}
                     <!-- FIN PIE DE PAGINA-->
                 </div>
                 <!--FIN CONTEDIO -->
                 <!-- BARRA OCULTA -->
+                {% block activity %}
                 <div class="offset-area">
                     <div class="offset-close"><i class="ti-close"></i></div>
                     <ul class="nav offset-menu-tab">
@@ -266,6 +279,7 @@
                         </div>
                     </div>
                 </div>
+                {% endblock %}
                 <!-- FIN BARRA OCULTA-->
                 <!-- JAVASCRIPT -->
                 <!-- jquery latest version -->

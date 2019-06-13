@@ -19,6 +19,6 @@ from configuraciones import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('configuraciones/', views.config_general, name='config_general'),
     path('configuraciones/empresa/', views.config_empresa, name='config_empresa'),
-
 ]
