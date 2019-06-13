@@ -88,13 +88,13 @@ class bot_opciones_modulo(models.Model):
     activo = models.BooleanField()
 
 class bot_empresa(models.Model):
-    za_empresa = models.CharField(primary_key=True, unique=True)
+    za_empresa = models.IntegerField(primary_key=True, unique=True)
     cod_empresa = models.CharField(max_length=15)
     razon_social = models.CharField(max_length=200)
     za_regimen_fiscal = models.IntegerField()
     za_tipo_establecimiento = models.IntegerField()
     direccion_fiscal = models.CharField(max_length=200)
     telefono1 = models.CharField(max_length=25)
-    telefono2 = models.CharField(max_lenght=25)
+    telefono2 = models.CharField(max_length=25)
     email = models.EmailField(max_length=100)
     fecha_creacion = models.DateTimeField(auto_now=True)
