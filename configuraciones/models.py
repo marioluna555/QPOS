@@ -98,3 +98,8 @@ class bot_empresa(models.Model):
     telefono2 = models.CharField(max_lenght=25)
     email = models.EmailField(max_length=100)
     fecha_creacion = models.DateTimeField(auto_now=True)
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> origin/QPOS20191.0.0
