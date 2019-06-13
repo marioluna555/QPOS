@@ -1,3 +1,4 @@
 configuraciones/migrations/
 configuraciones/__pycache__/
 qpos2019/__pycache__/
+*.pyc
