@@ -217,7 +217,7 @@ create table bot_usuarios(
     codigo_usuario varchar(15) not null default '',
     activo tinyint not null default 1,
     constraint PK_usuarios primary key(za_empresa,za_sucursal,za_usuario),
-    constraint FK_usuarios_bot_sucursales foreign key(za_empresa,za_sucursal)
-				references bot_empresas(za_empresa,za_sucursal),
+    -- constraint FK_usuarios_bot_sucursales foreign key(za_empresa,za_sucursal)
+	-- 			references bot_empresas(za_empresa,za_sucursal),
 	unique(za_empresa,za_sucursal,za_usuario)
 );
